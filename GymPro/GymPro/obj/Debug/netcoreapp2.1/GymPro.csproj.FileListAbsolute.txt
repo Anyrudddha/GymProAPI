@@ -1,0 +1,14 @@
+D:\GymProAPI\GymPro\GymPro\bin\Debug\netcoreapp2.1\GymPro.deps.json
+D:\GymProAPI\GymPro\GymPro\bin\Debug\netcoreapp2.1\GymPro.runtimeconfig.json
+D:\GymProAPI\GymPro\GymPro\bin\Debug\netcoreapp2.1\GymPro.runtimeconfig.dev.json
+D:\GymProAPI\GymPro\GymPro\bin\Debug\netcoreapp2.1\GymPro.dll
+D:\GymProAPI\GymPro\GymPro\obj\Debug\netcoreapp2.1\GymPro.csprojAssemblyReference.cache
+D:\GymProAPI\GymPro\GymPro\obj\Debug\netcoreapp2.1\GymPro.csproj.CoreCompileInputs.cache
+D:\GymProAPI\GymPro\GymPro\obj\Debug\netcoreapp2.1\GymPro.RazorAssemblyInfo.cache
+D:\GymProAPI\GymPro\GymPro\obj\Debug\netcoreapp2.1\GymPro.RazorAssemblyInfo.cs
+D:\GymProAPI\GymPro\GymPro\obj\Debug\netcoreapp2.1\GymPro.AssemblyInfoInputs.cache
+D:\GymProAPI\GymPro\GymPro\obj\Debug\netcoreapp2.1\GymPro.AssemblyInfo.cs
+D:\GymProAPI\GymPro\GymPro\obj\Debug\netcoreapp2.1\GymPro.RazorTargetAssemblyInfo.cache
+D:\GymProAPI\GymPro\GymPro\bin\Debug\netcoreapp2.1\GymPro.pdb
+D:\GymProAPI\GymPro\GymPro\obj\Debug\netcoreapp2.1\GymPro.dll
+D:\GymProAPI\GymPro\GymPro\obj\Debug\netcoreapp2.1\GymPro.pdb
