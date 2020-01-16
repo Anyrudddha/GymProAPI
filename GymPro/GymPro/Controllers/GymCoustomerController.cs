@@ -2,25 +2,23 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using GymPro.Models;
 using GymPro.DataLogic;
 namespace GymPro.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ValuesController : ControllerBase
+    
+    public class GymCoustomerController : ControllerBase
     {
-
-        GymCustomer g = new GymCustomer();
+    
         // GET api/values
         [HttpGet]
-        public List<Gym_Customer> Get()
+        public ActionResult<IEnumerable<string>> Get()
         {
-            return g.GetAllCoustomers("G101");
+            return new string[] { "value1", "value2" };
         }
-
-
 
         // GET api/values/5
         [HttpGet("{id}")]
@@ -28,7 +26,6 @@ namespace GymPro.Controllers
         {
             return "value";
         }
-
 
         // POST api/values
         [HttpPost]
