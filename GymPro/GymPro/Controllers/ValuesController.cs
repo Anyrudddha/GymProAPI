@@ -9,7 +9,7 @@ using GymPro.Properties.Models;
 
 namespace GymPro.Controllers
 {
-    [Route("api/[controller]")]
+   [Route("api/[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase
     {
@@ -22,8 +22,7 @@ namespace GymPro.Controllers
         {
             return new string[] { "value1", "value2" };
         }
-       [HttpGet("{id}")]
-       [Route("/Getdata/")]
+        [HttpGet("{id}")]
         public List<GymDetails> Get(string id)
         {
             SqlConnection con = new SqlConnection(ConnectionString);
@@ -58,11 +57,9 @@ namespace GymPro.Controllers
 
                     gym.Add(gd);
                     
-                }
-              
+                } 
             }
             return gym;
-
         }
 
         // POST api/values
@@ -76,6 +73,7 @@ namespace GymPro.Controllers
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
+
         }
 
         // DELETE api/values/5
