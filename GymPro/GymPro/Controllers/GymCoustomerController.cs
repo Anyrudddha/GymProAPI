@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using GymPro.DataLogic;
+using GymPro.Models;
 namespace GymPro.Controllers
 {
     [Route("api/[controller]")]
@@ -12,19 +10,19 @@ namespace GymPro.Controllers
     
     public class GymCoustomerController : ControllerBase
     {
-    
+        GymCustomer g = new GymCustomer();
         // GET api/values
-        [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        [HttpGet("{GymId}/{UserId}/{status}")]
+        public int  Get(string GymId,string UserId,string status)
         {
-            return new string[] { "value1", "value2" };
+            return  g.ChangeStatus(GymId,UserId,status) ;
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public List<Gym_Customer> Get(String id)
         {
-            return "value";
+            return g.GetAllCoustomers(id); 
         }
 
         // POST api/values

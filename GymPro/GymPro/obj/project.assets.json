@@ -12546,11 +12546,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\Gymproapi\\GymPro\\GymPro\\GymPro.csproj",
+      "projectUniqueName": "F:\\GymproApi\\GymPro\\GymPro\\GymPro.csproj",
       "projectName": "GymPro",
-      "projectPath": "F:\\Gymproapi\\GymPro\\GymPro\\GymPro.csproj",
+      "projectPath": "F:\\GymproApi\\GymPro\\GymPro\\GymPro.csproj",
       "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "F:\\Gymproapi\\GymPro\\GymPro\\obj\\",
+      "outputPath": "F:\\GymproApi\\GymPro\\GymPro\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

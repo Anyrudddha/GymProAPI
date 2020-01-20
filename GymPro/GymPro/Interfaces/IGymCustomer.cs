@@ -9,7 +9,7 @@ namespace GymPro.Interfaces
    public interface IGymCustomer
     {
          List<Gym_Customer> GetAllCoustomers(string gymId);
-          void ChangeStatus(string  gymId,string userId);
+          int ChangeStatus(string  gymId,string userId,string status);
 
     }
 }

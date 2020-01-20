@@ -12,12 +12,12 @@ namespace GymPro.Controllers
     public class ValuesController : ControllerBase
     {
 
-        GymCustomer g = new GymCustomer();
+      
         // GET api/values
         [HttpGet]
-        public List<Gym_Customer> Get()
+        public string Get()
         {
-            return g.GetAllCoustomers("G101");
+            return "hello World";
         }
 
 
