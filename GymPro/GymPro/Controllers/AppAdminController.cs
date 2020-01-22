@@ -20,7 +20,7 @@ namespace GymPro.Controllers
        
 
         [HttpPost("{AdminData}")]
-        public string Post(string AdminData)
+        public string addAdmin(string AdminData)
         {
 
             Application_Admin Admin = new Application_Admin();
@@ -40,8 +40,9 @@ namespace GymPro.Controllers
             return i;
         }
 
-        [HttpGet("{allUsers}")]
-        public string Get(string allUsers)
+        [HttpGet]
+        [Route("AllgymUsersGet")]
+        public string AllgymUsersGet(string allUsers)
         {
             
             List<GymUsers> gymuserlist = logic.getAllGymUsers();
@@ -50,13 +51,44 @@ namespace GymPro.Controllers
         }
 
 
-        [HttpGet("{allGymOwners}/{sds}")]
+        [HttpGet]
+        [Route("getgymowners")]
         public string getgymowners(string allGymOwners)
         {
 
             List<GymOwners> gymownerlist = logic.getAllGymOwner();
             return JsonConvert.SerializeObject(gymownerlist);
 
+        }
+
+        [HttpGet]
+        [Route("getAppAdminInfo/{Adminemail}")]
+        public string getAppAdminInfo(string Adminemail)
+        {
+
+            List<Application_Admin> admindata = logic.AppAdminInfo(Adminemail);
+            return JsonConvert.SerializeObject(admindata);
+
+        }
+
+        
+
+         [HttpGet]
+        [Route("getAllContactMessage")]
+        public string getAllContactMessage()
+        {
+
+            List<ContactUsMessege> admindata = logic.getAllContactMessage();
+            return JsonConvert.SerializeObject(admindata);
+
+        }
+
+        [HttpGet]
+        [Route("getNotifications")]
+        public string getNotifications()
+        {
+            List<Notification> notifications = logic.getNotifications();
+            return JsonConvert.SerializeObject(notifications);
         }
 
     }

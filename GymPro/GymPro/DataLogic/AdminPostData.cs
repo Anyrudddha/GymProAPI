@@ -120,5 +120,84 @@ namespace GymPro.DataLogic
             con.Close();
             return gymOwnerlist;
         }
+
+        public List<Application_Admin> AppAdminInfo(string adminemail)
+        {
+            SqlCommand cmd = new SqlCommand("Select * from tbl_ApplicationAdmin with(nolock) where adminEmail='"+adminemail+"'", con);
+            con.Open();
+            SqlDataReader reader = cmd.ExecuteReader();
+            List<Application_Admin> admindata = new List<Application_Admin>();
+            while (reader.Read())
+            {
+                Application_Admin admin = new Application_Admin();
+
+                admin.Admin_Id = reader[0].ToString();
+                admin.Admin_Name = reader[1].ToString();
+                admin.Admin_Email = reader[2].ToString();
+                admin.Mobile_Number = reader[3].ToString();
+                admin.Admin_Password= reader[4].ToString();
+                admin.Admin_Gender = reader[5].ToString();
+                admin.Admin_Type= reader[6].ToString();
+                admin.Admin_Create_date = reader[7].ToString();
+                admin.Status = reader[8].ToString();
+
+                admindata.Add(admin);
+            }
+            reader.Close();
+            con.Close();
+            return admindata;
+        }
+
+        
+
+            public List<ContactUsMessege> getAllContactMessage()
+        {
+            SqlCommand cmd = new SqlCommand("Select * from tbl_ContactUs with(nolock)", con);
+            con.Open();
+            SqlDataReader reader = cmd.ExecuteReader();
+            List<ContactUsMessege> contactUslist = new List<ContactUsMessege>();
+            while (reader.Read())
+            {
+                ContactUsMessege contactUs = new ContactUsMessege();
+
+                contactUs.ContactUs_Id = reader[0].ToString();
+                contactUs.ContactUs_Name = reader[1].ToString();
+                contactUs.ContactUs_Message = reader[2].ToString();
+                contactUs.ContactUs_ContactNo = reader[3].ToString();
+                contactUs.ContactUs_Email = reader[4].ToString();
+                contactUs.ContactUs_Status = reader[5].ToString();
+                contactUs.ContactUs_Date = reader[6].ToString();
+               
+
+                contactUslist.Add(contactUs);
+            }
+            reader.Close();
+            con.Close();
+            return contactUslist;
+        }
+
+        public List<Notification> getNotifications()
+        {
+            SqlCommand cmd = new SqlCommand("select * from tbl_SubcribedByGym with(nolock)  WHERE Subscription_end_date<=(SELECT GETDATE()+2) union select * from tbl_SubcribedByUser with(nolock) WHERE Subscription_end_date <= (SELECT GETDATE() + 2)", con);
+            con.Open();
+            SqlDataReader reader = cmd.ExecuteReader();
+            List<Notification> notifications_list = new List<Notification>();
+            while (reader.Read())
+            {
+                Notification notifications = new Notification();
+
+                notifications.userId = reader[1].ToString();
+                notifications.Subscription_Id = reader[2].ToString();
+                notifications.Subcription_start_date = reader[3].ToString();
+                notifications.Subsription_end_date = reader[4].ToString();
+                notifications.Subscription_amount_paid = reader[5].ToString();
+
+                notifications_list.Add(notifications);
+            }
+            reader.Close();
+            con.Close();
+            return notifications_list;
+        }
+
     }
 }
